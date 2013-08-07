@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+  <title>flock</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="/webjars/jquery/1.9.1/jquery.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+  <script src="/webjars/jquery-ui/1.10.2/ui/jquery-ui.js"></script>
+  <script src="/mondrian/js/jquery.ui.touch-punch.js"></script>
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/webjars/jquery-ui-themes/1.10.0/ui-darkness/jquery-ui.css" /> 
+  <link rel="stylesheet" href="/mondrian/css/mondrian.css" />
+  <link rel="stylesheet" href="flock.css" />
+
+  <script src="/js/flock_dev.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+    // Connect the REPL.
+    // flock.repl.connect();
+
+    // Add the FPS counter.
+    mondrian.anim.add_fps($('#fps')[0]);
+
+    // Start the animation(s).
+    $('.mondrian.flock').each(function (index) {
+    flock.flock.flock_anim(this);
+    });
+    });
+  </script>
+</head>
+
+<body>
+  <a href="https://github.com/you">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" 
+         src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" 
+         alt="Fork me on GitHub">
+  </a>
+  <div class="jumbotron">
+    <h2>Flock Simulation</h2>
+    <p>
+      <h4>
+        There are 3 rules to flock behavior:
+        <ol>
+          <li>you do not talk about flock behavior!</li>
+        </ol>
+        just kidding ;) rules are:
+        <ol>
+          <li>Separation - avoid crowding neighbors (short range repulsion)
+          <li>Alignment - steer towards average heading of neighbors
+          <li>Cohesion - steer towards average position of neighbors (long range attraction)
+        </ol>
+      </h4>
+      <h6>
+        Source: <a href="http://en.wikipedia.org/wiki/Flocking_(behavior)">Wikipedia</a>
+      </h6>
+    </p>
+    <h4>
+      <p>
+        In this siumulation, you can controle the radius of each of the 3 parameter above using the slides, and watch how the flock change.
+        You can also turn on/off each of the rule radius for better visability.
+      </p>
+    </h4>
+  </div>
+  <div class="container">
+    <div class="mondrian flock"
+         data-value-persist-image="false"
+         data-value-show-seperation="false"
+         data-value-show-alignment="false"
+         data-value-show-cohesion="false"
+         data-value-speed-pps="200"
+         data-value-seperation-r="60"
+         data-value-alignment-r="80"
+         data-value-cohesion-r="150"
+         >
+      <p>
+        <div class="slider control"
+             data-name="speed-pps"
+             data-label="Speed:"
+             data-min="0"
+             data-step="25"
+             data-max="500">
+        </div>
+        <div class="slider control"
+             data-name="seperation-r"
+             data-label="Seperation:"
+             data-min="10"
+             data-step="5"
+             data-max="200">
+        </div>
+        <div class="slider control"
+             data-name="alignment-r"
+             data-label="Alignment:"
+             data-min="10"
+             data-step="5"
+             data-max="200">
+        </div>
+        <div class="slider control"
+             data-name="cohesion-r"
+             data-label="Cohesion"
+             data-min="10"
+             data-step="5"
+             data-max="200">
+        </div>
+        <div class="togglegroup control"
+             data-button1-name="persist-image"
+             data-button1-label="Persist Image"
+             data-button2-name="show-seperation"
+             data-button2-label="Show Seperation"
+             data-button3-name="show-alignment"
+             data-button3-label="Show Alignment"
+             data-button4-name="show-cohesion"
+             data-button4-label="Show Cohesion"
+             >
+        </div>
+      </p>
+      <canvas id="flock-canvas" class="col-lg-12"></canvas>
+    </div>
+  </div>
+  <p>
+    <h4>
+      Flock simulation was created in ClojureScript, base on the <a href="https://github.com/malyn/mondrian">Mondrian</a> lib
+      .
+    </h4>
+  </p>
+  <p>
+    <h4>Tzach Livyatan</h4>
+  </p>
+  <p>
+    <a href="https://twitter.com/TzachL" class="twitter-follow-button" data-show-count="false">Follow @TzachL</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </p>
+</body>

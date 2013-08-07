@@ -1,0 +1,28 @@
+.jumbotron {
+    background-color: rgb(25,29,33);
+    color: white;
+}
+
+.jumbotron h2 {
+    color: yellow;
+}
+
+h3, h4 {
+   color: white;
+}
+
+.control .label {
+    color: white;
+    font-size: 120%;
+    background-color: rgb(25,29,33);
+}
+
+.ui-button-text-only .ui-button-text {
+    color: white;
+    font-size: 150%;
+}
+
+
+#flock-canvas {
+  width: 1000px;
+}
