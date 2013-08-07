@@ -1,10 +1,6 @@
 (defproject flock "0.1.0-SNAPSHOT"
   :description "Flock Simuation"
-  :url "http://example.com/FIXME"
-  :license {:name "BSD"
-            :url "http://www.opensource.org/licenses/BSD-3-Clause"
-            :distribution :repo }
-
+  :url "https://github.com/tzach/flock"
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [com.cemerick/piggieback "0.0.4"]
                  [compojure "1.1.5"]
@@ -12,7 +8,6 @@
                  [ring "1.1.8"]
                  [rm-hull/monet "0.1.7"]
 ]
-
   :min-lein-version "2.1.2"
   :plugins [[lein-cljsbuild "0.3.2"]
             [lein-ring "0.8.3"]]
@@ -42,7 +37,6 @@
   :ring {:handler flock.server/app}
 
   :main flock.server)
-
 
 ;; (load-file "src/clj/flock/server.clj") (flock.server/browser-repl)
 ;; (in-ns 'flock.flock)
