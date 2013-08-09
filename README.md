@@ -7,8 +7,8 @@ Clojurescript implemtation of a flock behavior
 See it in action
 
 To run it localy:
->lein run
-goto http://localhost:3000/
+> lein run
+> goto http://localhost:3000/
 
 ## License
 
