@@ -12,6 +12,8 @@ To run it localy:
 To view
 > goto http://localhost:3000/
 
+(http://tzach.github.io/flock-demo/ "Live Demo")
+
 ## License
 
 Copyright © 2013 Tzach Livyatan

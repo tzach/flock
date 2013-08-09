@@ -10,8 +10,7 @@
 ]
   :min-lein-version "2.1.2"
   :plugins [[lein-cljsbuild "0.3.2"]
-            [lein-ring "0.8.3"]
-            [lein-gh-pages "0.1.0-snapshot"]]
+            [lein-ring "0.8.3"]]
   :hooks [leiningen.cljsbuild]
 ;;  :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
 
