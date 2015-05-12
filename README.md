@@ -1,4 +1,4 @@
-# Flock Simulation
+# Flock Simulation!
 
 Clojurescript implemtation of a flock behavior
 
