@@ -1,6 +1,6 @@
 # Flock Simulation
 
-Clojurescript implemtation of a flock behavior
+Clojurescript implemtation of a flock behavior.
 
 
 ## Usage
