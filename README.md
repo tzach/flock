@@ -1,9 +1,9 @@
-# Flock Simulation
+# Flock Simulation!!
 
 Clojurescript implemtation of a flock behavior.
 
 
-## Usage
+## Usage:
 See it in action
 
 To run it localy:
